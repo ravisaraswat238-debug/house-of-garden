@@ -25,6 +25,7 @@
   --font-headline: var(--font-epilogue), sans-serif;
   --font-display: var(--font-playfair), serif;
   --font-body: var(--font-plus-jakarta), sans-serif;
+  --font-script: var(--font-caveat), cursive;
 
   --radius-organic: 2.5rem;
 }
@@ -54,3 +55,44 @@ body {
 .tea-stamp {
   box-shadow: 0 4px 20px -2px rgba(90, 115, 60, 0.15);
 }
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reels {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-reels {
+  display: flex;
+  width: max-content;
+  animation: marquee-reels 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reels:hover {
+  animation-play-state: paused;
+}
+

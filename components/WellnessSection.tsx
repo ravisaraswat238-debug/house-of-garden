@@ -94,7 +94,7 @@ export default function WellnessSection() {
                 <div className="mt-6 flex items-center justify-center gap-4">
                   <a
                     className="px-6 py-2.5 bg-[#4b6628] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#3b511f] transition-colors inline-flex items-center gap-2"
-                    href="https://www.brewingwellness.store"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >

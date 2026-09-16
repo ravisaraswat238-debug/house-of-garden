@@ -13,6 +13,7 @@ export interface TeaBlend {
   footerLabel: string;
   tag: string;
   tagColor: string;
+  price?: string;
   bgLightClass?: string;
 }
 

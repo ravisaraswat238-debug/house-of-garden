@@ -34,7 +34,7 @@ export default function InquirySection() {
   };
 
   return (
-    <section className="w-full bg-[#fefef8] py-20" id="inquiry">
+    <section className="w-full bg-[#efeae0] py-20" id="inquiry">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="bg-[#f8f7ee] border-2 border-[#8ca865]/30 rounded-[36px] p-8 md:p-14 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

@@ -1,73 +1,101 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { MdLocalFlorist, MdPublic, MdCheckCircle } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#3d5122] text-[#fefef8] pt-16 pb-12 border-t border-white/10">
-      <div className="max-w-[1320px] mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/15">
+    <footer className="relative w-full overflow-hidden text-[#fefef8] pt-20 pb-14 sm:pt-24 sm:pb-16 ">
+      {/* Background Image with Light Atmospheric Overlay to showcase the tea landscape */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Image
+          src="/banners/footer.png"
+          alt="House of Gardens botanical footer background"
+          fill
+          className="object-cover object-[center_0%]"
+          sizes="100vw"
+        />
+        {/* Light balanced overlay so the estate scenery is clearly visible while text pops */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/25" />
+      </div>
+
+      <div className="relative z-10 max-w-[1360px] mx-auto px-6 sm:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/20">
           {/* Brand Info */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[#fefef8] p-1 flex items-center justify-center">
-                <MdLocalFlorist className="text-[24px] text-[#4b6628]" />
+            <Link href="#" className="flex items-center gap-3.5 mb-5 group w-fit">
+              <div className="w-12 h-12 rounded-full bg-[#fefef8] p-1 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                <MdLocalFlorist className="text-[28px] text-[#4b6628]" />
               </div>
               <div>
-                <span className="font-headline font-extrabold text-lg text-white uppercase tracking-tight block">
+                <span className="font-headline font-extrabold text-xl sm:text-2xl text-white uppercase tracking-tight block drop-shadow-md">
                   House of Gardens
                 </span>
-                <span className="text-[10px] tracking-[0.2em] text-[#fed488] uppercase font-semibold">
+                <span className="text-xs tracking-[0.25em] text-[#fed488] uppercase font-bold drop-shadow">
                   Brewing Wellness
                 </span>
               </div>
-            </div>
-            <p className="text-xs text-white/80 leading-relaxed max-w-sm mb-4">
+            </Link>
+            <p className="text-sm sm:text-base text-white/95 leading-relaxed max-w-md mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
               Started from our own house with a vision of catering holistic
               wellness, quality and authenticity. HOG curates the finest tea
               buds and crafts them into tea blends infused with health and
               warmth.
             </p>
-            <div className="flex items-center gap-2 text-xs text-[#fed488] font-semibold">
-              <MdPublic className="text-[16px]" />
-              <a
-                className="hover:underline"
-                href="https://www.brewingwellness.store"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                www.brewingwellness.store
-              </a>
-            </div>
           </div>
 
           {/* 8 Blends Directory */}
           <div className="lg:col-span-4 flex flex-col">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#fed488] mb-4">
+            <h4 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-[#fed488] mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
               Botanical Tea Directory
             </h4>
-            <div className="grid grid-cols-2 gap-2 text-xs text-white/80">
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:text-[15px] font-medium text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Hibiscus Flower Tea
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Blue Butterfly Pea
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Elaichi Green Tea
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Rose Green Tea
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Darjeeling Green
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Lavender Green
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Peach Green Tea
               </a>
-              <a className="hover:text-white transition-colors" href="#catalog-blends">
+              <a
+                className="hover:text-[#fed488] hover:translate-x-0.5 transition-all"
+                href="#catalog-blends"
+              >
                 • Silver Needle White
               </a>
             </div>
@@ -75,24 +103,24 @@ export default function Footer() {
 
           {/* Wellness Standards */}
           <div className="lg:col-span-3 flex flex-col">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#fed488] mb-4">
+            <h4 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-[#fed488] mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
               Our Integrity Standard
             </h4>
-            <ul className="text-xs space-y-2 text-white/80">
-              <li className="flex items-center gap-2">
-                <MdCheckCircle className="text-[15px] text-[#fed488] shrink-0" />
+            <ul className="text-sm sm:text-[15px] font-medium space-y-3.5 text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+              <li className="flex items-center gap-2.5">
+                <MdCheckCircle className="text-[18px] text-[#fed488] shrink-0" />
                 <span>100% Organic certified leaves</span>
               </li>
-              <li className="flex items-center gap-2">
-                <MdCheckCircle className="text-[15px] text-[#fed488] shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <MdCheckCircle className="text-[18px] text-[#fed488] shrink-0" />
                 <span>Zero Artificial Colorants</span>
               </li>
-              <li className="flex items-center gap-2">
-                <MdCheckCircle className="text-[15px] text-[#fed488] shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <MdCheckCircle className="text-[18px] text-[#fed488] shrink-0" />
                 <span>Zero Chemical Preservatives</span>
               </li>
-              <li className="flex items-center gap-2">
-                <MdCheckCircle className="text-[15px] text-[#fed488] shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <MdCheckCircle className="text-[18px] text-[#fed488] shrink-0" />
                 <span>Whole Flower &amp; Bud Cuts Only</span>
               </li>
             </ul>
@@ -100,19 +128,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright & Domain Note */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <p>© 2025 House of Gardens (HOG). Brewing Wellness. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span>Official Catalog Edition</span>
-            <a
-              className="hover:text-[#fed488] transition-colors"
-              href="https://www.brewingwellness.store"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Online Shop
-            </a>
-          </div>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/80 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+          <p>
+            © 2026 House of Gardens (HOG). Brewing Wellness. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

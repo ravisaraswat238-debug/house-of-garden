@@ -1,123 +1,233 @@
 import React from "react";
 import Image from "next/image";
 import {
-  MdVerified,
-  MdEco,
-  MdBlock,
-  MdHealthAndSafety,
-  MdWaterDrop,
-  MdSpa,
-  MdShield,
-  MdArrowForward,
-} from "react-icons/md";
-import { IconType } from "react-icons";
+  Leaf,
+  Award,
+  Coffee,
+  Sprout,
+  ArrowRight,
+} from "lucide-react";
 
-interface BenefitItem {
-  icon: IconType;
-  text: string;
-  fullSpan?: boolean;
-}
-
-const BENEFITS: BenefitItem[] = [
-  { icon: MdVerified, text: "No Artificial Colors" },
-  { icon: MdEco, text: "100% Organic" },
-  { icon: MdBlock, text: "No Preservatives" },
-  { icon: MdHealthAndSafety, text: "Reduces Inflammation" },
-  { icon: MdWaterDrop, text: "Mild in Texture" },
-  { icon: MdSpa, text: "Great Way to Unwind" },
-  { icon: MdShield, text: "Packed with Antioxidants", fullSpan: true },
+const features = [
+  {
+    icon: Leaf,
+    title: "Carefully Sourced",
+    description:
+      "We select the finest tea leaves from renowned gardens.",
+  },
+  {
+    icon: Award,
+    title: "Premium Quality",
+    description:
+      "Every leaf is processed with care to preserve its natural flavour and aroma.",
+  },
+  {
+    icon: Coffee,
+    title: "Rich Experience",
+    description:
+      "From the first sip to the last, we bring you a truly refreshing experience.",
+  },
+  {
+    icon: Sprout,
+    title: "Sustainable Practices",
+    description:
+      "Good tea grows a better tomorrow. We support eco-friendly and ethical farming.",
+  },
 ];
 
 export default function AboutSection() {
   return (
     <section
-      className="w-full bg-[#fefef8] py-16 md:py-24 relative overflow-hidden"
       id="about-us"
+      className="relative overflow-hidden py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10"
     >
-      {/* Decorative leafy background accents */}
-      <div className="absolute top-10 right-[-5%] w-72 h-72 rounded-full bg-[#8ca865]/10 filter blur-2xl pointer-events-none" />
+      {/* Botanical Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Image
+          src="/banners/about-bg.png"
+          alt="House of Gardens botanical background"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          priority={false}
+        />
+      </div>
 
-      <div className="max-w-[1320px] mx-auto px-6">
-        {/* About Us Green Header Pill matching Catalog Page 2 */}
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="bg-[#6f8f41] text-[#fefef8] px-10 py-3 rounded-full shadow-md transform -rotate-1 mb-6">
-            <h2 className="font-display italic text-3xl md:text-4xl font-normal tracking-wide">
-              About Us
-            </h2>
-          </div>
-          <div className="max-w-3xl mx-auto space-y-4 text-center">
-            <p className="font-headline font-bold text-xl md:text-2xl text-[#3b4c23] leading-relaxed">
-              Started from our own house with a vision of catering{" "}
-              <span className="text-[#835427] underline decoration-[#8ca865] underline-offset-4">
-                holistic wellness
-              </span>
-              , quality and authenticity.
-            </p>
-            <p className="font-headline italic text-lg md:text-xl text-[#55693c] leading-relaxed max-w-2xl mx-auto">
-              HOG curates the finest tea buds and crafts them into tea blends
-              infused with health and warmth.
-            </p>
+      <div className="relative z-10 mx-auto max-w-7xl">
+        {/* =========================
+            MAIN ABOUT CARD
+        ========================== */}
+        <div className="relative overflow-hidden rounded-[36px] sm:rounded-[42px] border border-[#d8e2c7] bg-[#eff3e5]/90 backdrop-blur-xs px-6 py-10 shadow-[0_10px_35px_rgba(40,65,20,0.05)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-16">
+            {/* LEFT CONTENT */}
+            <div className="max-w-xl">
+              {/* Eyebrow */}
+              <div className="mb-4 flex items-center gap-3.5">
+                <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#557335] uppercase">
+                  ABOUT US
+                </span>
+                <span className="h-[1.5px] w-14 bg-[#b5c79e]" />
+              </div>
+
+              {/* Main Heading */}
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.12] tracking-tight text-[#223514]">
+                From Our Gardens
+                <br />
+                to Your Perfect Cup
+              </h2>
+
+              {/* Description */}
+              <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-[#56654b]">
+                At House of Gardens, we believe that great tea is more than just
+                a drink — it&apos;s a journey. Our teas are carefully sourced
+                from the finest gardens, blended with tradition and crafted
+                with care, so you can experience the purest taste of nature in
+                every sip.
+              </p>
+
+              {/* CTA Button */}
+              <a
+                href="#catalog-blends"
+                className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#3e5924] px-8 py-3.5 text-sm sm:text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#2e431a] hover:shadow-lg hover:scale-[1.02]"
+              >
+                <span>Our Story</span>
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1.5"
+                />
+              </a>
+            </div>
+
+            {/* RIGHT IMAGE COMPOSITION */}
+            <div className="relative mx-auto w-full max-w-[560px] lg:mx-0 lg:ml-auto">
+              {/* Tagline Badge with Tea Leaves at Top Right (matching Instagram section font) */}
+              <div className="absolute -top-10 right-2 z-20 flex items-center gap-2 select-none sm:-top-12 sm:right-4">
+                <div className="text-right">
+                  <span className="block font-display italic text-2xl sm:text-3xl font-semibold leading-[1.0] text-[#223514] tracking-tight">
+                    Real Tea
+                  </span>
+                  <span className="block font-display italic text-2xl sm:text-3xl font-semibold leading-[1.0] text-[#c29d59] tracking-tight">
+                    Real Stories
+                  </span>
+                </div>
+                {/* Botanical sprig illustration */}
+                <div className="relative -mt-1 text-[#4d6b2b]">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="rotate-[18deg]"
+                  >
+                    <path
+                      d="M6 42C12 30 20 22 38 12"
+                      stroke="#4d6b2b"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M38 12C36 4 28 2 24 6C20 10 24 16 38 12Z"
+                      fill="#688c3e"
+                      stroke="#4d6b2b"
+                      strokeWidth="1.5"
+                    />
+                    <path
+                      d="M26 20C28 14 24 8 18 10C12 12 16 18 26 20Z"
+                      fill="#81a552"
+                      stroke="#4d6b2b"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Main Image: Hand harvesting fresh tea leaves over terrace hills */}
+              <div className="relative overflow-hidden rounded-[26px] sm:rounded-[32px] border-[6px] sm:border-[8px] border-white shadow-[0_16px_40px_rgba(40,60,20,0.14)]">
+                <Image
+                  src="/banners/about-tea-harvest.png"
+                  alt="Carefully hand-plucking tea leaves in morning mist tea gardens"
+                  width={1550}
+                  height={1014}
+                  priority={false}
+                  className="h-[280px] sm:h-[350px] lg:h-[380px] w-full object-cover"
+                />
+              </div>
+
+              {/* Overlapping Floating Photo: Freshly brewed tea cup, whole leaves & wooden bowl */}
+              <div className="absolute -bottom-8 -right-3 sm:-bottom-10 sm:-right-2 z-10 w-[160px] sm:w-[215px] lg:w-[235px] aspect-square overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] sm:border-[7px] border-white bg-white shadow-[0_20px_45px_rgba(30,45,15,0.22)] rotate-[4deg] transition-transform duration-500 hover:rotate-0 hover:scale-105">
+                <Image
+                  src="/banners/about-tea-cup.png"
+                  alt="Freshly brewed cup of tea with whole loose leaves and wooden bowl"
+                  width={1550}
+                  height={1014}
+                  priority={false}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Decorative botanical branch peeking behind the floating image */}
+              <div className="pointer-events-none absolute -bottom-5 right-36 sm:right-48 -z-0 opacity-40">
+                <svg
+                  width="70"
+                  height="70"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  className="text-[#64843d] rotate-[-20deg]"
+                >
+                  <path
+                    d="M5 45C15 35 25 25 45 10"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M45 10C42 4 34 3 30 7C26 11 31 16 45 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M30 22C32 16 27 12 21 14C15 16 19 22 30 22Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* "Our tea blends offer" Feature Container (from Catalog Page 2) */}
-        <div className="mt-8 max-w-4xl mx-auto bg-[#f8f7ee] border-2 border-[#8ca865]/30 rounded-[32px] p-8 md:p-12 shadow-sm relative">
-          {/* Green Pill Badge on top of card */}
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#647f3b] text-[#fefef8] px-8 py-2.5 rounded-full font-headline font-bold text-lg tracking-wide shadow-md">
-            Our tea blends offer
-          </div>
+        {/* =========================
+            4 VALUE PILLARS / FEATURES
+        ========================== */}
+        <div className="relative mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-[#d4dfc3]">
+          {features.map((feature) => {
+            const Icon = feature.icon;
 
-          {/* 7 Verified Badge Items with React Icons (Exact items from Catalog Page 2) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-y-5 gap-x-8 pt-4">
-            {BENEFITS.map((b) => {
-              const IconComponent = b.icon;
-              return (
-                <div
-                  key={b.text}
-                  className={`flex items-center gap-3 bg-white p-3.5 rounded-2xl shadow-xs border border-[#8ca865]/20 ${
-                    b.fullSpan ? "sm:col-span-2 justify-center" : ""
-                  }`}
-                >
-                  <span className="w-8 h-8 rounded-full bg-[#8ca865]/20 flex items-center justify-center text-[#647f3b] shrink-0">
-                    <IconComponent className="text-[18px]" />
-                  </span>
-                  <span className="font-headline font-bold text-[#2d3a1a] text-base">
-                    {b.text}
-                  </span>
+            return (
+              <div
+                key={feature.title}
+                className="group px-6 py-4 text-center lg:px-8"
+              >
+                {/* Round Sage Icon Badge */}
+                <div className="mx-auto flex h-18 w-18 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#e3ebd4] shadow-sm transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-[#dae5c8] group-hover:shadow-md">
+                  <Icon
+                    size={30}
+                    strokeWidth={1.8}
+                    className="text-[#3c5722]"
+                  />
                 </div>
-              );
-            })}
-          </div>
 
-          {/* Bottom miniature tea flight photo from Page 2 */}
-          <div className="mt-8 pt-6 border-t border-[#8ca865]/20 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#8ca865] shadow shrink-0">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvPMF9lqD6cPYu4JnD7XSg8k_DBNytr7yEoDabE6i_DtZbI9CDR8ffhhppRaPXqcvmdSXrvMgyzfNw122mLxoaTaeLQ6Dsoxx8UZI89U9Xn2FGO0iORxDY-CriDE5Hhn4LBIwnJ8huCr19KMVG9ol_4gB7sKhVr7qC29bA4BnDl6XtunbzlnVcX8yZwIDqcNb_CkS-YkJ2D93lCB2g_YYpfRQ3lpCkARMn-57g8ZiW3G3Ejs-P25d2"
-                  alt="Tea tasting array"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h4 className="font-headline font-bold text-sm text-[#2d3a1a]">
-                  Whole Bud Alchemy
-                </h4>
-                <p className="text-xs text-[#55693c]">
-                  Fresh steeped batches highlighting natural floral tints and
-                  soothing hues.
+                {/* Pillar Title */}
+                <h3 className="mt-5 font-headline text-base sm:text-lg font-bold text-[#233814]">
+                  {feature.title}
+                </h3>
+
+                {/* Pillar Description */}
+                <p className="mx-auto mt-2.5 max-w-[240px] text-xs sm:text-sm leading-relaxed text-[#617351]">
+                  {feature.description}
                 </p>
               </div>
-            </div>
-            <a
-              className="text-xs font-bold text-[#4b6628] uppercase tracking-wider underline hover:text-[#835427] flex items-center gap-1.5 shrink-0"
-              href="#catalog-blends"
-            >
-              <span>View all botanical blends</span>
-              <MdArrowForward className="text-[14px]" />
-            </a>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

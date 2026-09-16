@@ -30,6 +30,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Ruby Tart",
     tag: "Caffeine-Free",
     tagColor: "text-[#bc4767]",
+    price: "500/-",
     bgLightClass: "bg-[#fbf5f7]",
   },
   {
@@ -51,6 +52,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Warm Cardamom",
     tag: "Gentle Energy",
     tagColor: "text-[#b37746]",
+    price: "500/-",
     bgLightClass: "bg-[#faf4ef]",
   },
   {
@@ -72,6 +74,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Focus & Clarity",
     tag: "First Flush",
     tagColor: "text-[#789c4a]",
+    price: "500/-",
     bgLightClass: "bg-[#f4f7ee]",
   },
   {
@@ -93,6 +96,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Stone Fruit Aroma",
     tag: "Hydrating",
     tagColor: "text-[#8b5a3e]",
+    price: "500/-",
     bgLightClass: "bg-[#faf3ed]",
   },
   {
@@ -114,6 +118,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Indigo Pigment",
     tag: "100% Herbal",
     tagColor: "text-[#24336a]",
+    price: "500/-",
     bgLightClass: "bg-[#eef1fa]",
   },
   {
@@ -135,6 +140,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Mood Elevating",
     tag: "Aromatherapy",
     tagColor: "text-[#d44e87]",
+    price: "500/-",
     bgLightClass: "bg-[#faeef4]",
   },
   {
@@ -156,6 +162,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Evening Rest",
     tag: "Unwind Ritual",
     tagColor: "text-[#6b528e]",
+    price: "500/-",
     bgLightClass: "bg-[#f4effa]",
   },
   {
@@ -177,6 +184,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Cellular Guard",
     tag: "Unoxidized",
     tagColor: "text-[#38434a]",
+    price: "500/-",
     bgLightClass: "bg-[#f0f2f3]",
   },
 ];

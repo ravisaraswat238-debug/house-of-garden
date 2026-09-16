@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Epilogue, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Epilogue, Playfair_Display, Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 
 const epilogue = Epilogue({
@@ -21,6 +21,13 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["500", "700"],
   display: "swap",
 });
 
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${epilogue.variable} ${playfair.variable} ${plusJakarta.variable} scroll-smooth`}
+      className={`${epilogue.variable} ${playfair.variable} ${plusJakarta.variable} ${caveat.variable} scroll-smooth`}
     >
       <body className="bg-[#8ca865] font-body text-on-surface antialiased selection:bg-[#7d9b56] selection:text-white min-h-screen">
         {children}
