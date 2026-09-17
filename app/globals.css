@@ -68,7 +68,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 35s linear infinite;
+  animation: marquee-scroll 65s linear infinite;
   will-change: transform;
 }
 

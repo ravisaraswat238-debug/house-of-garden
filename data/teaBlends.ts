@@ -17,7 +17,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Whole Flowers",
     headerColor: "bg-[#bc4767]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD-D4RD3oQW1IqTRsq_EeFZYMxdPYQfRDlVj99SrIgndlovfgEadWrn4ISVA59PbchypQfhFOTuqy6QyE2FVdvFDI0avjCgITDwpjcdrwNNQOVuU65WndudGz42GSfvdB8PTGi7MI1vesfVpUw9BaQ4B9oohbbVkarKeH3u3q9lhiVXaHWdtWouR_V09YBdgi1UV9CV0M1daRi-tY1ExZauZr6ska61S_2_sxadVgEP2wWl3C419qNg",
+      "/productsImg/4.png",
     imageAlt: "House of Gardens Hibiscus Flower Tea Jar",
     benefitsTitleColor: "text-[#7a243a]",
     benefits: [
@@ -30,7 +30,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Ruby Tart",
     tag: "Caffeine-Free",
     tagColor: "text-[#bc4767]",
-    price: "500/-",
+    price: "₹449",
+    weight: "50gm",
     bgLightClass: "bg-[#fbf5f7]",
   },
   {
@@ -39,7 +40,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Cardamom Pods",
     headerColor: "bg-[#b37746]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC7BVYPMh1_Wmn7e2wNSTtm8ttRTxRlSyglmvxp535t70U9UaqD3yxPlF0IL8ByMxDi7qV5ISq8G2OjsvJGMwE_aSn-85nUNmBJV1SEUP4-jlI4rAs1CKlti7RsvrUFVeppMTOY0bXWwKgdKyk2713_MDrJp9tu2F7W9IVx70eBvcpnrilv-trIc6_GXQY8u4t1_lLreBJlRgkPl1boB04Pbs_P_sRdyxUmxqWoQ_3doGeql7ocJQEl",
+"/productsImg/2.png",
     imageAlt: "Elaichi Green Tea with aromatic cardamom pods",
     benefitsTitleColor: "text-[#73431d]",
     benefits: [
@@ -52,7 +53,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Warm Cardamom",
     tag: "Gentle Energy",
     tagColor: "text-[#b37746]",
-    price: "500/-",
+    price: "₹310",
+    weight: "50gm",
     bgLightClass: "bg-[#faf4ef]",
   },
   {
@@ -61,7 +63,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "High Mountain",
     headerColor: "bg-[#789c4a]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCVKfGFO5bUGKeZ9sUVBZ6Uw9oeJme3gY2VyGdEKjrZs-ldLKZ45oy3b99tYPJOxG3R7K9GGhuTrIaTyGQCQ4bOGoILfFXeNBQgJlX8yuroo0hsK7RG7Ta2vtGpreswcwa-p0o71hyvBAIYO5heehxrQn_PpUaexq4o942D5L94xXUkWkffvoC5RzWNjFwIop7CNKPhV-4DTUwmGekcPkqI8Vn9fFkD3FCnNkrSculQ21fuyIw1Zfps",
+      "/productsImg/3.png",
     imageAlt: "Darjeeling high grown green tea leaves",
     benefitsTitleColor: "text-[#425b20]",
     benefits: [
@@ -74,7 +76,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Focus & Clarity",
     tag: "First Flush",
     tagColor: "text-[#789c4a]",
-    price: "500/-",
+    price: "₹229",
+    weight: "50gm",
     bgLightClass: "bg-[#f4f7ee]",
   },
   {
@@ -83,7 +86,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Fruit & Leaf",
     headerColor: "bg-[#8b5a3e]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAvPMF9lqD6cPYu4JnD7XSg8k_DBNytr7yEoDabE6i_DtZbI9CDR8ffhhppRaPXqcvmdSXrvMgyzfNw122mLxoaTaeLQ6Dsoxx8UZI89U9Xn2FGO0iORxDY-CriDE5Hhn4LBIwnJ8huCr19KMVG9ol_4gB7sKhVr7qC29bA4BnDl6XtunbzlnVcX8yZwIDqcNb_CkS-YkJ2D93lCB2g_YYpfRQ3lpCkARMn-57g8ZiW3G3Ejs-P25d2",
+      "/productsImg/8.png",
     imageAlt: "Peach Green Tea botanical blend",
     benefitsTitleColor: "text-[#52311f]",
     benefits: [
@@ -96,7 +99,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Stone Fruit Aroma",
     tag: "Hydrating",
     tagColor: "text-[#8b5a3e]",
-    price: "500/-",
+    price: "₹310",
+    weight: "50gm",
     bgLightClass: "bg-[#faf3ed]",
   },
   {
@@ -105,7 +109,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Butterfly Pea",
     headerColor: "bg-[#24336a]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDCVkXaEbqxLDOWs08Oq-z4mfQymBbFgGpC6XMkBCmy3mPMFKaQ1S07j_pMncT0K272E75OkgEVI1cQH2D5F-zZQmbL83-q8m9Sqwl4PiDqYalPhcSzlcFtKnClv_RQwH_ZAwhxYPmSaqEqPoG0CrPuvsfLwsTaVPWKFkYKTQdPrI8ivSFGgI6O7aTlAED1WgaERVcKgSnx3LKARxNP9rbT_GCBPSPRbciyKO8EuLnCA3Pj4440Zo-n",
+      "/productsImg/3.png",
     imageAlt: "Butterfly Pea Flower Blue Tea",
     benefitsTitleColor: "text-[#141f45]",
     benefits: [
@@ -118,7 +122,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Indigo Pigment",
     tag: "100% Herbal",
     tagColor: "text-[#24336a]",
-    price: "500/-",
+    price: "₹449",
+    weight: "50gm",
     bgLightClass: "bg-[#eef1fa]",
   },
   {
@@ -127,7 +132,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Dried Rose Petals",
     headerColor: "bg-[#d44e87]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCcwxBmjuCaQazsEwJCvOe5DNDgF5p5SnjORN7mf-_tzrQg2w9AwFhfjpoDxiW9acukapiZf6zBSA45lZKE5-txFbaFgD_HIGhaak93vJp79gTdqmrl7hAlpeVdgk81QLu1NnGjN9q8nVRsQMpJv6v48m8J19lxVwcmAwZwh1XGEJVBFWYUGJxmQL16g1XcbhaLRfEIxyu4pa3QRtqncb2GP-u_IEHuY_6ZFZsq9jixH61ASV6z9EhH",
+      "/productsImg/5.png",
     imageAlt: "Rose petals blended with tender green tea",
     benefitsTitleColor: "text-[#7e254e]",
     benefits: [
@@ -140,7 +145,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Mood Elevating",
     tag: "Aromatherapy",
     tagColor: "text-[#d44e87]",
-    price: "500/-",
+    price: "₹449",
+    weight: "50gm",
     bgLightClass: "bg-[#faeef4]",
   },
   {
@@ -149,7 +155,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "French Lavender",
     headerColor: "bg-[#6b528e]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA3iH_dT06BtLm-GFEx-RN3QhuqbkEOXU2N_hMISWdr3jylU3xQj4zezvLByAi5R8aULBAN9LZUAQnl5fiFmBEzWfFCZ-KlX72S4AeKTMa2sItdxiRVMDw6QoOgti0K4IeTaBDMgW_VAJObPK-znCS-OCPpuO7dy2R4-jbws1AlVaPMC0ZyssZSv0PHTNR8UQseWr_x6ZVEea4kNRMU2K8K7ak-Ikd-utQeZ8DH5WXhr0vx-k9TokDb",
+      "/productsImg/6.png",
     imageAlt: "Lavender blossoms steeped with green tea",
     benefitsTitleColor: "text-[#402e58]",
     benefits: [
@@ -162,7 +168,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Evening Rest",
     tag: "Unwind Ritual",
     tagColor: "text-[#6b528e]",
-    price: "500/-",
+    price: "₹449",
+    weight: "50gm",
     bgLightClass: "bg-[#f4effa]",
   },
   {
@@ -171,7 +178,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     badgeText: "Silver Needles",
     headerColor: "bg-[#38434a]",
     imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD-D4RD3oQW1IqTRsq_EeFZYMxdPYQfRDlVj99SrIgndlovfgEadWrn4ISVA59PbchypQfhFOTuqy6QyE2FVdvFDI0avjCgITDwpjcdrwNNQOVuU65WndudGz42GSfvdB8PTGi7MI1vesfVpUw9BaQ4B9oohbbVkarKeH3u3q9lhiVXaHWdtWouR_V09YBdgi1UV9CV0M1daRi-tY1ExZauZr6ska61S_2_sxadVgEP2wWl3C419qNg",
+      "/productsImg/1.png",
     imageAlt: "Delicate silver needle white tea tips",
     benefitsTitleColor: "text-[#20272c]",
     benefits: [
@@ -184,7 +191,8 @@ export const TEA_BLENDS: TeaBlend[] = [
     footerLabel: "Cellular Guard",
     tag: "Unoxidized",
     tagColor: "text-[#38434a]",
-    price: "500/-",
+    price: "₹669",
+    weight: "50gm",
     bgLightClass: "bg-[#f0f2f3]",
   },
 ];

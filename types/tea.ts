@@ -14,6 +14,7 @@ export interface TeaBlend {
   tag: string;
   tagColor: string;
   price?: string;
+  weight?: string;
   bgLightClass?: string;
 }
 

@@ -73,8 +73,11 @@ export default function HeroSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Full-bleed edge-to-edge banner frame */}
-      <div className="relative w-full aspect-[1024/415] min-h-[190px] sm:min-h-[260px] md:min-h-[380px] lg:min-h-[460px] overflow-hidden">
+      {/* Full-bleed edge-to-edge banner frame matching the 1024x415 image dimensions */}
+      <div
+        className="relative w-full aspect-[1024/415] overflow-hidden"
+        style={{ aspectRatio: "1024 / 415" }}
+      >
         {/* Banner Slides Carousel Track */}
         <div
           className="flex w-full h-full transition-transform duration-700 ease-in-out"
@@ -102,7 +105,6 @@ export default function HeroSection() {
                     fill
                     priority={index === 0}
                     className="object-cover object-center select-none"
-                    sizes="100vw"
                   />
                 </Link>
               </div>

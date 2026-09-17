@@ -2,19 +2,19 @@ import { HeroBanner } from "@/types/banner";
 
 export const heroBanners: HeroBanner[] = [
   {
-    id: "matcha-special-offer",
-    title: "Matcha Moments — Buy 1 Get 1 Free",
-    alt: "House of Gardens Ceremonial Matcha Green Tea Special Offer - Buy 1 Get 1 Free at matchless price",
-    imageSrc: "/banners/hero-banner1.jpg.jpeg",
+    id: "hibiscus-flower-tea",
+    title: "Hibiscus Flower Tea — For Natural Wellness & Vitality",
+    alt: "House of Gardens Hibiscus Flower Tea - Brewing Wellness for Natural Vitality",
+    imageSrc: "/banners/banner1.png",
     link: "#catalog-blends",
     tag: "Special Offer",
     ctaText: "Shop Now",
   },
   {
-    id: "herbyoga-wellness-range",
-    title: "Introducing Herbyoga Ayurveda Wellness Range",
-    alt: "Introducing Herbyoga Ayurveda Wellness Range - Ashwakarm, Nirvana Elixir, Spiritual Harmony, Nirvana Floral Bliss, Ashwashiddhi",
-    imageSrc: "/banners/hero-banner2.png",
+    id: "rose-herbal-tea",
+    title: "Rose Herbal Tea — Pure Botanical Infusion",
+    alt: "House of Gardens Rose Herbal Tea - Whole Flower Buds & Herbal Infusions",
+    imageSrc: "/banners/banner2.png",
     link: "#catalog-blends",
     tag: "Ayurveda Wellness",
     ctaText: "Explore Collection",
