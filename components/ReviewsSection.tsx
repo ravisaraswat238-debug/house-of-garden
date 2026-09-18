@@ -94,6 +94,7 @@ export default function ReviewsSection() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -115,16 +116,53 @@ export default function ReviewsSection() {
     };
   }, []);
 
+  const scrollNext = () => {
+    if (!scrollContainerRef.current) return;
+    const container = scrollContainerRef.current;
+    const firstCard = container.querySelector<HTMLElement>("[data-review-card]");
+    const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 320; // 16px gap
+
+    // If at or near the end, loop smoothly back to the beginning
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 20) {
+      container.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      container.scrollBy({
+        left: cardWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const handleScroll = (direction: "left" | "right") => {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     const firstCard = container.querySelector<HTMLElement>("[data-review-card]");
     const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 320; // 16px gap
-    container.scrollBy({
-      left: direction === "left" ? -cardWidth : cardWidth,
-      behavior: "smooth",
-    });
+    if (direction === "left") {
+      container.scrollBy({
+        left: -cardWidth,
+        behavior: "smooth",
+      });
+    } else {
+      scrollNext();
+    }
   };
+
+  // Automatically move one step forward every 5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      if (document.visibilityState === "visible") {
+        scrollNext();
+      }
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
   return (
     <section
@@ -183,7 +221,13 @@ export default function ReviewsSection() {
           </div>
 
           {/* 2. Full Cards Horizontal Slider (No cut-off cards, exact full card scroll) */}
-          <div className="relative flex-1 min-w-0">
+          <div
+            className="relative flex-1 min-w-0"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             {/* Left Nav Arrow Button (only visible when can scroll left) */}
             {canScrollLeft && (
               <button

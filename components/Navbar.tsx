@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MdMenu, MdClose } from "react-icons/md";
+import { ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -80,9 +81,13 @@ export default function Navbar() {
             href="https://www.brewingwellness.store"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-full bg-[#4b6628] hover:bg-[#3b5220] text-[#fefef8] font-bold text-xs sm:text-sm tracking-wide uppercase shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-[#3e5924] px-5 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#2e431a] hover:shadow-lg hover:scale-[1.02] active:scale-95 cursor-pointer"
           >
-            View More
+            <span>View More</span>
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1.5"
+            />
           </a>
         </div>
       </div>
@@ -110,13 +115,18 @@ export default function Navbar() {
             );
           })}
           <div className="pt-2 border-t border-[#4b6628]/15 flex items-center justify-between text-xs text-[#4b6628] font-bold uppercase tracking-wider">
+            <span>Online Store</span>
             <a
               href="https://www.brewingwellness.store"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#3e5924] px-4 py-2 text-xs font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#2e431a] hover:shadow-lg hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
-              Visit Online Store →
+              <span>View More</span>
+              <ArrowRight
+                size={14}
+                className="transition-transform duration-300 group-hover:translate-x-1.5"
+              />
             </a>
           </div>
         </div>

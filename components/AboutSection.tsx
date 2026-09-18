@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   Leaf,
@@ -36,6 +38,48 @@ const features = [
 ];
 
 export default function AboutSection() {
+  const [autoHover, setAutoHover] = useState(false);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const hasTriggeredRef = useRef(false);
+
+  useEffect(() => {
+    const element = imageRef.current;
+    if (!element) return;
+
+    let startTimer: NodeJS.Timeout;
+    let endTimer: NodeJS.Timeout;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasTriggeredRef.current) {
+          hasTriggeredRef.current = true;
+          observer.disconnect();
+
+          // Delay slightly after entering viewport for a natural visual entrance
+          startTimer = setTimeout(() => {
+            setAutoHover(true);
+
+            // Hold hover state for 1.3s then return to default tilt
+            endTimer = setTimeout(() => {
+              setAutoHover(false);
+            }, 1300);
+          }, 350);
+        }
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(startTimer);
+      clearTimeout(endTimer);
+    };
+  }, []);
   return (
     <section
       id="about-us"
@@ -155,7 +199,18 @@ export default function AboutSection() {
               </div>
 
               {/* Overlapping Floating Photo: Freshly brewed tea cup, whole leaves & wooden bowl */}
-              <div className="absolute -bottom-8 -right-3 sm:-bottom-10 sm:-right-2 z-10 w-[160px] sm:w-[215px] lg:w-[235px] aspect-square overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] sm:border-[7px] border-white bg-white shadow-[0_20px_45px_rgba(30,45,15,0.22)] rotate-[4deg] transition-transform duration-500 hover:rotate-0 hover:scale-105">
+              <div
+                ref={imageRef}
+                onMouseEnter={() => {
+                  setAutoHover(false);
+                  hasTriggeredRef.current = true;
+                }}
+                className={`absolute -bottom-8 -right-3 sm:-bottom-10 sm:-right-2 z-10 w-[160px] sm:w-[215px] lg:w-[235px] aspect-square overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] sm:border-[7px] border-white bg-white transition-all duration-700 ease-out hover:rotate-0 hover:scale-105 hover:shadow-[0_25px_50px_rgba(30,45,15,0.28)] ${
+                  autoHover
+                    ? "rotate-0 scale-105 shadow-[0_25px_50px_rgba(30,45,15,0.28)]"
+                    : "rotate-[4deg] scale-100 shadow-[0_20px_45px_rgba(30,45,15,0.22)]"
+                }`}
+              >
                 <Image
                   src="/banners/about-tea-cup.png"
                   alt="Freshly brewed cup of tea with whole loose leaves and wooden bowl"

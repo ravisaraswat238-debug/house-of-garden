@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import TeaCard from "@/components/TeaCard";
@@ -13,7 +15,7 @@ export default function CatalogSection() {
       {/* Products Botanical Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="/banners/watermark-removed-Gemini_Generated_Image_lodz7slodz7slodz.png"
+          src="/banners/cataloge-background.png"
           alt="House of Gardens products botanical background"
           fill
           className="object-cover object-bottom"
@@ -43,8 +45,8 @@ export default function CatalogSection() {
 
         {/* 8 Signature Blends Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TEA_BLENDS.map((blend) => (
-            <TeaCard key={blend.id} blend={blend} />
+          {TEA_BLENDS.map((blend, index) => (
+            <TeaCard key={blend.id} blend={blend} index={index} />
           ))}
         </div>
       </div>
