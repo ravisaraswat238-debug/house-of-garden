@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Epilogue, Playfair_Display, Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { Manrope, Playfair_Display, Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 
-const epilogue = Epilogue({
-  variable: "--font-epilogue",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -32,6 +32,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://houseofgardens.store"),
   title: "House of Gardens — Brewing Wellness | Handcrafted Botanical Tea Blends",
   description:
     "Started from our own house with a vision of catering holistic wellness, quality and authenticity. HOG curates the finest whole tea buds and crafts them into infusions infused with health and warmth.",
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${epilogue.variable} ${playfair.variable} ${plusJakarta.variable} ${caveat.variable} scroll-smooth`}
+      className={`${manrope.variable} ${playfair.variable} ${plusJakarta.variable} ${caveat.variable} scroll-smooth`}
     >
       <body className="bg-[#8ca865] font-body text-on-surface antialiased selection:bg-[#7d9b56] selection:text-white min-h-screen">
         {children}

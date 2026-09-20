@@ -8,6 +8,8 @@ import {
   MdChevronLeft,
   MdChevronRight,
 } from "react-icons/md";
+import { motion } from "motion/react";
+import Reveal from "@/components/Reveal";
 
 interface Review {
   id: string;
@@ -167,12 +169,12 @@ export default function ReviewsSection() {
   return (
     <section
       id="customer-reviews"
-      className="w-full bg-[#fcfbf7] py-16 sm:py-20 lg:py-24 border-t border-[#4b6628]/10 overflow-hidden"
+      className="w-full bg-[#fcfbf7] py-10 sm:py-16 lg:py-24 border-t border-[#4b6628]/10 overflow-hidden"
       aria-label="Customer Reviews"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <Reveal className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16" y={25} duration={0.75}>
           <div className="inline-flex items-center justify-center gap-3 mb-3">
             <span className="h-[1.5px] w-8 bg-[#9eb67f]" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#557335]">
@@ -180,19 +182,25 @@ export default function ReviewsSection() {
             </span>
             <span className="h-[1.5px] w-8 bg-[#9eb67f]" />
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e2e13] tracking-tight leading-[1.15]">
+          <h2 className="font-headline text-2xl sm:text-3xl lg:text-5xl font-light text-[#1e2e13] tracking-tight leading-[1.15]">
             Loved by Tea Seekers Across the Country
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#617351] leading-relaxed">
             Genuine reflections from our community of mindful tea drinkers, herbal
             enthusiasts, and daily wellness practitioners.
           </p>
-        </div>
+        </Reveal>
 
         {/* Carousel & Summary Row */}
         <div className="relative flex flex-col lg:flex-row items-stretch gap-5 lg:gap-6">
           {/* 1. Left Fixed Aggregate Rating Card (No shadow, clean pop up effect) */}
-          <div className="w-full lg:w-[280px] xl:w-[300px] shrink-0 bg-white rounded-2xl sm:rounded-[24px] border border-[#4b6628]/20 p-7 sm:p-8 flex flex-col items-center justify-between text-center transition-transform duration-300 hover:-translate-y-1.5">
+          <motion.div
+            className="w-full lg:w-[280px] xl:w-[300px] shrink-0 bg-white rounded-2xl sm:rounded-[24px] border border-[#4b6628]/20 p-7 sm:p-8 flex flex-col items-center justify-between text-center transition-transform duration-300 hover:-translate-y-1.5"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div className="w-full pt-2">
               <span className="font-headline font-black text-xl sm:text-2xl tracking-wider text-[#1e2e13] block">
                 EXCELLENT
@@ -218,7 +226,7 @@ export default function ReviewsSection() {
                 100% Verified Purchases
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* 2. Full Cards Horizontal Slider (No cut-off cards, exact full card scroll) */}
           <div
@@ -259,7 +267,7 @@ export default function ReviewsSection() {
                 msOverflowStyle: "none",
               }}
             >
-              {reviewsData.map((review) => {
+              {reviewsData.map((review, index) => {
                 const isExpanded = expandedId === review.id;
                 const isLongText = review.comment.length > 130;
                 const displayText =
@@ -268,10 +276,18 @@ export default function ReviewsSection() {
                     : review.comment;
 
                 return (
-                  <div
+                  <motion.div
                     key={review.id}
                     data-review-card
                     className="w-full sm:w-[calc((100%-16px)/2)] lg:w-[calc((100%-32px)/3)] shrink-0 snap-start bg-white rounded-2xl sm:rounded-[24px] border border-[#4b6628]/18 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1] hover:border-[#4b6628]/45"
+                    initial={{ opacity: 0, y: 25 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{
+                      duration: 0.75,
+                      delay: (index % 3) * 0.08,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                   >
                     <div>
                       {/* Customer Header */}
@@ -341,7 +357,7 @@ export default function ReviewsSection() {
                         {isExpanded ? "Show less" : "Read more"}
                       </button>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>

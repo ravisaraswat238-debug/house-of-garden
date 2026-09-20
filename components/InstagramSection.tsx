@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { MdPlayArrow } from "react-icons/md";
+import Reveal from "@/components/Reveal";
 
 const instaImages = [
   "/insta/769175902_1378085024514454_6185433258486304315_n.jpg",
@@ -68,10 +69,10 @@ export default function InstagramSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
           {/* Left Title Block (matching reference layout) */}
-          <div className="shrink-0 text-center lg:text-left lg:min-w-[280px] xl:min-w-[320px]">
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[#1f2615] leading-[1.05] tracking-tight">
+          <Reveal className="shrink-0 text-center lg:text-left lg:min-w-[280px] xl:min-w-[320px]" y={25} duration={0.8}>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl text-[#1f2615] leading-[1.08] tracking-tight">
               Find us
-              <br />
+              <br className="hidden md:block" />
               today on
               <br />
               <span className="text-[#c29d59] font-normal italic">
@@ -88,7 +89,7 @@ export default function InstagramSection() {
               <FaInstagram className="text-base text-[#c29d59]" />
               <span>@houseofgardens_teas</span>
             </a>
-          </div>
+          </Reveal>
 
           {/* Right Infinite Auto-Scrolling Reels Track */}
           <div className="flex-1 w-full overflow-hidden select-none">

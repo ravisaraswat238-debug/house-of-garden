@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function PromoBanners() {
   return (
@@ -9,7 +12,13 @@ export default function PromoBanners() {
       aria-label="Featured Promotion"
     >
       <div className="max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8">
-        <Link
+        <motion.div
+          initial={{ opacity: 0, scale: 1.03 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Link
           href="#catalog-blends"
           className="group relative block w-full aspect-[1904/560] overflow-hidden rounded-[8px] sm:rounded-[12px] shadow-md hover:shadow-xl transition-all duration-500 border border-black/5 cursor-pointer bg-[#fafaf7]"
           style={{ aspectRatio: "1904 / 560" }}
@@ -28,6 +37,7 @@ export default function PromoBanners() {
             <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-500 pointer-events-none" />
           </div>
         </Link>
+        </motion.div>
       </div>
     </section>
   );

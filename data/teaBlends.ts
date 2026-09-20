@@ -16,8 +16,7 @@ export const TEA_BLENDS: TeaBlend[] = [
     name: "Hibiscus Flower Tea",
     badgeText: "Whole Flowers",
     headerColor: "bg-[#bc4767]",
-    imageSrc:
-      "/productsImg/4.png",
+    imageSrc: "/productsImg/4.png",
     imageAlt: "House of Gardens Hibiscus Flower Tea Jar",
     benefitsTitleColor: "text-[#7a243a]",
     benefits: [
@@ -33,14 +32,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹449",
     weight: "50gm",
     bgLightClass: "bg-[#fbf5f7]",
+    description:
+      "A naturally vibrant herbal infusion made from carefully selected whole hibiscus petals. With its deep ruby-red color and pleasantly tart, cranberry-like flavor, it offers a refreshing and aromatic cup that can be enjoyed hot or served chilled.",
+    rating: 4.9,
+    reviewsCount: 28,
+    flavorNotes: ["Ruby Tart", "Cranberry Sweetness", "Floral Bloom"],
+    caffeineLevel: "Naturally Caffeine-Free",
+    steepTime: "3 - 5 mins",
+    steepTemp: "95°C / 205°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["100% Organic Hibiscus Petals (Sabdariffa)"],
   },
   {
     id: "elaichi-green-tea",
     name: "Elaichi Green Tea",
     badgeText: "Cardamom Pods",
     headerColor: "bg-[#b37746]",
-    imageSrc:
-"/productsImg/2.png",
+    imageSrc: "/productsImg/2.png",
     imageAlt: "Elaichi Green Tea with aromatic cardamom pods",
     benefitsTitleColor: "text-[#73431d]",
     benefits: [
@@ -56,14 +64,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹310",
     weight: "50gm",
     bgLightClass: "bg-[#faf4ef]",
+    description:
+      "An aromatic Ayurvedic-inspired blend crafted from tender high-grown green tea leaves and whole green cardamom pods. Infused with warm, comforting spices and subtle natural sweetness, it offers an uplifting and soothing cup that promotes mindful vitality.",
+    rating: 4.8,
+    reviewsCount: 34,
+    flavorNotes: ["Warm Spice", "Subtle Sweetness", "Refreshing Menthol"],
+    caffeineLevel: "Low Caffeine",
+    steepTime: "2 - 3 mins",
+    steepTemp: "80°C / 175°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["Hand-picked Green Tea Leaves", "Green Cardamom Pods"],
   },
   {
     id: "darjeeling-green-tea",
     name: "Darjeeling Green Tea",
     badgeText: "High Mountain",
     headerColor: "bg-[#789c4a]",
-    imageSrc:
-      "/productsImg/3.png",
+    imageSrc: "/productsImg/9.png",
     imageAlt: "Darjeeling high grown green tea leaves",
     benefitsTitleColor: "text-[#425b20]",
     benefits: [
@@ -79,14 +96,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹229",
     weight: "50gm",
     bgLightClass: "bg-[#f4f7ee]",
+    description:
+      "An exquisite single-estate green tea hand-plucked from the misty Himalayan slopes of Darjeeling. Celebrated for its pale golden liquor, delicate muscatel aroma, and crisp vegetal sweetness, it delivers a pure, rejuvenating cup rich in natural antioxidants.",
+    rating: 4.9,
+    reviewsCount: 42,
+    flavorNotes: ["Vegetal Sweetness", "Muscatel Florals", "Clean Crisp Finish"],
+    caffeineLevel: "Moderate Caffeine",
+    steepTime: "2 - 3 mins",
+    steepTemp: "80°C / 175°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["100% High Grown Single Estate Darjeeling Green Tea"],
   },
   {
     id: "peach-green-tea",
     name: "Peach Green Tea",
     badgeText: "Fruit & Leaf",
     headerColor: "bg-[#8b5a3e]",
-    imageSrc:
-      "/productsImg/8.png",
+    imageSrc: "/productsImg/8.png",
     imageAlt: "Peach Green Tea botanical blend",
     benefitsTitleColor: "text-[#52311f]",
     benefits: [
@@ -102,14 +128,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹310",
     weight: "50gm",
     bgLightClass: "bg-[#faf3ed]",
+    description:
+      "A sun-kissed orchard infusion marrying antioxidant-rich spring green tea leaves with natural dried peach essence and golden calendula. With its luscious stone-fruit aroma and delicate, refreshing sweetness, it creates a revitalizing brew that is divine both hot and poured over ice.",
+    rating: 4.7,
+    reviewsCount: 19,
+    flavorNotes: ["Juicy Stone Fruit", "Delicate Nectar", "Smooth Herbaceous"],
+    caffeineLevel: "Low Caffeine",
+    steepTime: "3 mins",
+    steepTemp: "85°C / 185°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["Green Tea Leaves", "Natural Peach Extract", "Calendula Petals"],
   },
   {
     id: "blue-tea",
     name: "Blue Tea",
     badgeText: "Butterfly Pea",
     headerColor: "bg-[#24336a]",
-    imageSrc:
-      "/productsImg/3.png",
+    imageSrc: "/productsImg/3.png",
     imageAlt: "Butterfly Pea Flower Blue Tea",
     benefitsTitleColor: "text-[#141f45]",
     benefits: [
@@ -125,14 +160,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹449",
     weight: "50gm",
     bgLightClass: "bg-[#eef1fa]",
+    description:
+      "An enchanting herbal infusion crafted from sun-dried whole Butterfly Pea blossoms. Renowned for its mesmerizing royal blue hue and earthy, velvety smoothness, it miraculously transforms to vivid violet with a drop of citrus, offering a visual and calming ritual.",
+    rating: 4.9,
+    reviewsCount: 31,
+    flavorNotes: ["Earthy Sweetness", "Woody Herbal", "Color-Changing Magic"],
+    caffeineLevel: "Naturally Caffeine-Free",
+    steepTime: "4 - 5 mins",
+    steepTemp: "90°C / 195°F",
+    servingSize: "4-5 dried flowers per 200ml",
+    ingredients: ["100% Whole Butterfly Pea Flowers (Clitoria ternatea)"],
   },
   {
     id: "rose-green-tea",
     name: "Rose Green Tea",
     badgeText: "Dried Rose Petals",
     headerColor: "bg-[#d44e87]",
-    imageSrc:
-      "/productsImg/5.png",
+    imageSrc: "/productsImg/5.png",
     imageAlt: "Rose petals blended with tender green tea",
     benefitsTitleColor: "text-[#7e254e]",
     benefits: [
@@ -148,14 +192,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹449",
     weight: "50gm",
     bgLightClass: "bg-[#faeef4]",
+    description:
+      "A romantic botanical formulation harmonizing fragrant organic Damask rose petals with tender whole green tea leaves. Imbued with sweet floral aromatics and a gentle calming finish, it offers a stress-melting cup that nurtures inner tranquility and natural radiance.",
+    rating: 4.8,
+    reviewsCount: 26,
+    flavorNotes: ["Sensual Rose Aroma", "Soft Honey", "Velvety Green Tea"],
+    caffeineLevel: "Low Caffeine",
+    steepTime: "2 - 3 mins",
+    steepTemp: "80°C / 175°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["Green Tea Leaves", "Organic Damask Rose Petals"],
   },
   {
     id: "lavender-green-tea",
     name: "Lavender Green Tea",
     badgeText: "French Lavender",
     headerColor: "bg-[#6b528e]",
-    imageSrc:
-      "/productsImg/6.png",
+    imageSrc: "/productsImg/6.png",
     imageAlt: "Lavender blossoms steeped with green tea",
     benefitsTitleColor: "text-[#402e58]",
     benefits: [
@@ -171,14 +224,23 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹449",
     weight: "50gm",
     bgLightClass: "bg-[#f4effa]",
+    description:
+      "A serene evening infusion combining fragrant French lavender blossoms with smooth, soothing whole-leaf green tea. With its delicate herbaceous bouquet and lingering floral tranquility, it delivers a restful, meditative cup designed to quiet the mind before twilight.",
+    rating: 4.9,
+    reviewsCount: 22,
+    flavorNotes: ["Calming Herbal", "Floral Lavender", "Crisp Clean Finish"],
+    caffeineLevel: "Very Low Caffeine",
+    steepTime: "3 mins",
+    steepTemp: "85°C / 185°F",
+    servingSize: "1 tsp (2g) per 200ml",
+    ingredients: ["Green Tea Leaves", "French Lavender Flowers"],
   },
   {
     id: "white-tea",
     name: "White Tea",
     badgeText: "Silver Needles",
     headerColor: "bg-[#38434a]",
-    imageSrc:
-      "/productsImg/1.png",
+    imageSrc: "/productsImg/1.png",
     imageAlt: "Delicate silver needle white tea tips",
     benefitsTitleColor: "text-[#20272c]",
     benefits: [
@@ -194,5 +256,15 @@ export const TEA_BLENDS: TeaBlend[] = [
     price: "₹669",
     weight: "50gm",
     bgLightClass: "bg-[#f0f2f3]",
+    description:
+      "An ethereal Silver Needle white tea hand-harvested exclusively at dawn from unopened, downy spring buds. With its pale champagne liquor, subtle notes of fresh melon, and velvety floral undertones, it offers a sublime, antioxidant-dense cup of rare botanical purity.",
+    rating: 5.0,
+    reviewsCount: 16,
+    flavorNotes: ["Silky Melon", "Fresh Cut Grass", "Ethereal Sweetness"],
+    caffeineLevel: "Gentle & Mild",
+    steepTime: "4 - 6 mins",
+    steepTemp: "75°C / 165°F",
+    servingSize: "1.5 tsp (2g) per 200ml",
+    ingredients: ["100% Silver Needle White Tea Buds (Camellia sinensis)"],
   },
 ];

@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
+import Reveal from "@/components/Reveal";
 import {
   MdWbTwilight,
   MdWbSunny,
@@ -7,69 +11,85 @@ import {
   MdArrowForward,
 } from "react-icons/md";
 
+const flowItems = [
+  {
+    icon: MdWbTwilight,
+    title: "Morning Alertness",
+    desc: "Darjeeling Green Tea or Elaichi Green Tea",
+  },
+  {
+    icon: MdWbSunny,
+    title: "Afternoon Digestion & Glow",
+    desc: "Peach Green Tea or Rose Green Tea",
+  },
+  {
+    icon: MdBedtime,
+    title: "Evening Unwind & Calming",
+    desc: "Lavender Green Tea or Blue Tea Infusion",
+  },
+];
+
 export default function WellnessSection() {
   return (
     <section
-      className="w-full bg-[#8ca865] py-20 text-[#fefef8]"
+      className="w-full bg-[#8ca865] py-10 sm:py-14 md:py-20 text-[#fefef8]"
       id="wellness-pillars"
     >
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Flow Descriptions */}
           <div className="lg:col-span-5 flex flex-col">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#f8f7ee] mb-2">
-              Holistic Daily Flow
-            </span>
-            <h2 className="font-headline text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-              Harmonize Your Mind &amp; Body All Day
-            </h2>
-            <p className="text-white/90 text-sm md:text-base leading-relaxed mb-6">
-              Our blends are designed to accompany the natural rhythm of your
-              circadian day, from dawn awakening to restful dusk tranquility.
-            </p>
+            <Reveal y={25} duration={0.8}>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#f8f7ee] mb-2 block">
+                Holistic Daily Flow
+              </span>
+              <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-light leading-tight mb-4">
+                Harmonize Your Mind &amp; Body All Day
+              </h2>
+              <p className="text-white/90 text-sm md:text-base leading-relaxed mb-6">
+                Our blends are designed to accompany the natural rhythm of your
+                circadian day, from dawn awakening to restful dusk tranquility.
+              </p>
+            </Reveal>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/20">
-                <MdWbTwilight className="text-[#fed488] text-[24px] shrink-0" />
-                <div>
-                  <h4 className="font-headline font-bold text-sm">
-                    Morning Alertness
-                  </h4>
-                  <p className="text-xs text-white/80">
-                    Darjeeling Green Tea or Elaichi Green Tea
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/20">
-                <MdWbSunny className="text-[#fed488] text-[24px] shrink-0" />
-                <div>
-                  <h4 className="font-headline font-bold text-sm">
-                    Afternoon Digestion &amp; Glow
-                  </h4>
-                  <p className="text-xs text-white/80">
-                    Peach Green Tea or Rose Green Tea
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/20">
-                <MdBedtime className="text-[#fed488] text-[24px] shrink-0" />
-                <div>
-                  <h4 className="font-headline font-bold text-sm">
-                    Evening Unwind &amp; Calming
-                  </h4>
-                  <p className="text-xs text-white/80">
-                    Lavender Green Tea or Blue Tea Infusion
-                  </p>
-                </div>
-              </div>
+              {flowItems.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.title}
+                    className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3.5 rounded-2xl border border-white/20"
+                    initial={{ opacity: 0, y: 25 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      duration: 0.75,
+                      delay: index * 0.12,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <Icon className="text-[#fed488] text-[24px] shrink-0" />
+                    <div>
+                      <h4 className="font-headline font-bold text-sm">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-white/80">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
 
           {/* Right Showcase Image Card with Organic Curved Border */}
-          <div className="lg:col-span-7 flex justify-center">
-            <div className="bg-[#fefef8] p-6 rounded-[36px] shadow-2xl text-[#2d3a1a] max-w-lg w-full border-4 border-white/40">
+          <motion.div
+            className="lg:col-span-7 flex justify-center"
+            initial={{ opacity: 0, y: 30, scale: 1.02 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="bg-[#fefef8] p-3 md:p-6 rounded-[36px] shadow-2xl text-[#2d3a1a] max-w-lg w-full border-4 border-white/40">
               <div className="aspect-[16/10] rounded-2xl overflow-hidden mb-6 relative">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvPMF9lqD6cPYu4JnD7XSg8k_DBNytr7yEoDabE6i_DtZbI9CDR8ffhhppRaPXqcvmdSXrvMgyzfNw122mLxoaTaeLQ6Dsoxx8UZI89U9Xn2FGO0iORxDY-CriDE5Hhn4LBIwnJ8huCr19KMVG9ol_4gB7sKhVr7qC29bA4BnDl6XtunbzlnVcX8yZwIDqcNb_CkS-YkJ2D93lCB2g_YYpfRQ3lpCkARMn-57g8ZiW3G3Ejs-P25d2"
@@ -104,7 +124,7 @@ export default function WellnessSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

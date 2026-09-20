@@ -16,6 +16,15 @@ export interface TeaBlend {
   price?: string;
   weight?: string;
   bgLightClass?: string;
+  description?: string;
+  rating?: number;
+  reviewsCount?: number;
+  flavorNotes?: string[];
+  caffeineLevel?: string;
+  steepTime?: string;
+  steepTemp?: string;
+  servingSize?: string;
+  ingredients?: string[];
 }
 
 export interface ConsultationFormData {

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { heroBanners } from "@/data/heroBanners";
 
 export default function HeroSection() {
@@ -74,9 +75,12 @@ export default function HeroSection() {
       onTouchEnd={handleTouchEnd}
     >
       {/* Full-bleed edge-to-edge banner frame matching the 1024x415 image dimensions */}
-      <div
+      <motion.div
         className="relative w-full aspect-[1024/415] overflow-hidden"
         style={{ aspectRatio: "1024 / 415" }}
+        initial={{ opacity: 0, scale: 1.04 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Banner Slides Carousel Track */}
         <div
@@ -151,7 +155,7 @@ export default function HeroSection() {
             <path d="M9 5l7 7-7 7" />
           </svg>
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 }

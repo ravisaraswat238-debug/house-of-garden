@@ -22,7 +22,8 @@
   --color-outline: #74796b;
   --color-outline-variant: #c4c8b8;
 
-  --font-headline: var(--font-epilogue), sans-serif;
+  --font-headline: var(--font-manrope), sans-serif;
+  --font-manrope: var(--font-manrope), sans-serif;
   --font-display: var(--font-playfair), serif;
   --font-body: var(--font-plus-jakarta), sans-serif;
   --font-script: var(--font-caveat), cursive;
@@ -37,6 +38,7 @@ body {
   scroll-behavior: smooth;
 }
 
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -46,6 +48,14 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #8ca865;
   border-radius: 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .wave-shape {

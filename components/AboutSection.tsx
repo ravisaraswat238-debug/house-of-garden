@@ -9,6 +9,7 @@ import {
   Sprout,
   ArrowRight,
 } from "lucide-react";
+import { motion } from "motion/react";
 
 const features = [
   {
@@ -86,7 +87,13 @@ export default function AboutSection() {
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10"
     >
       {/* Botanical Background Image */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <motion.div
+        className="absolute inset-0 z-0 pointer-events-none"
+        initial={{ opacity: 0, scale: 1.04 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Image
           src="/banners/about-bg.png"
           alt="House of Gardens botanical background"
@@ -95,7 +102,7 @@ export default function AboutSection() {
           sizes="100vw"
           priority={false}
         />
-      </div>
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* =========================
@@ -104,7 +111,13 @@ export default function AboutSection() {
         <div className="relative overflow-hidden rounded-[36px] sm:rounded-[42px] border border-[#d8e2c7] bg-[#eff3e5]/90 backdrop-blur-xs px-6 py-10 shadow-[0_10px_35px_rgba(40,65,20,0.05)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
           <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-16">
             {/* LEFT CONTENT */}
-            <div className="max-w-xl">
+            <motion.div
+              className="max-w-xl"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
               {/* Eyebrow */}
               <div className="mb-4 flex items-center gap-3.5">
                 <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#557335] uppercase">
@@ -114,7 +127,7 @@ export default function AboutSection() {
               </div>
 
               {/* Main Heading */}
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.12] tracking-tight text-[#223514]">
+              <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl lg:text-[54px] font-light leading-[1.15] tracking-tight text-[#223514]">
                 From Our Gardens
                 <br />
                 to Your Perfect Cup
@@ -140,10 +153,16 @@ export default function AboutSection() {
                   className="transition-transform duration-300 group-hover:translate-x-1.5"
                 />
               </a>
-            </div>
+            </motion.div>
 
             {/* RIGHT IMAGE COMPOSITION */}
-            <div className="relative mx-auto w-full max-w-[560px] lg:mx-0 lg:ml-auto">
+            <motion.div
+              className="relative mx-auto w-full max-w-[560px] lg:mx-0 lg:ml-auto"
+              initial={{ opacity: 0, x: -30, scale: 1.02 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+            >
               {/* Tagline Badge with Tea Leaves at Top Right (matching Instagram section font) */}
               <div className="absolute -top-10 right-2 z-20 flex items-center gap-2 select-none sm:-top-12 sm:right-4">
                 <div className="text-right">
@@ -246,7 +265,7 @@ export default function AboutSection() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -254,13 +273,21 @@ export default function AboutSection() {
             4 VALUE PILLARS / FEATURES
         ========================== */}
         <div className="relative mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-[#d4dfc3]">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
-              <div
+              <motion.div
                 key={feature.title}
                 className="group px-6 py-4 text-center lg:px-8"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.75,
+                  delay: index * 0.08,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
               >
                 {/* Round Sage Icon Badge */}
                 <div className="mx-auto flex h-18 w-18 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#e3ebd4] shadow-sm transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-[#dae5c8] group-hover:shadow-md">
@@ -280,7 +307,7 @@ export default function AboutSection() {
                 <p className="mx-auto mt-2.5 max-w-[240px] text-xs sm:text-sm leading-relaxed text-[#617351]">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
