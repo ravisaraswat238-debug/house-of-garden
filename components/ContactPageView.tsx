@@ -124,10 +124,10 @@ My name is ${formData.fullName || "a tea lover"}.
                       Phone / WhatsApp
                     </span>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+919310772895"
                       className="font-semibold text-sm hover:text-[#4b6628] transition-colors"
                     >
-                      +91 98765 43210
+                      +91 93107 72895
                     </a>
                   </div>
                 </div>
@@ -141,10 +141,10 @@ My name is ${formData.fullName || "a tea lover"}.
                       Email Address
                     </span>
                     <a
-                      href="mailto:care@houseofgardens.store"
+                      href="mailto:houseofgardenswellness@gmail.com"
                       className="font-semibold text-sm hover:text-[#4b6628] transition-colors"
                     >
-                      care@houseofgardens.store
+                      houseofgardenswellness@gmail.com
                     </a>
                   </div>
                 </div>
@@ -155,10 +155,10 @@ My name is ${formData.fullName || "a tea lover"}.
                   </div>
                   <div>
                     <span className="text-[11px] font-bold uppercase tracking-wider text-[#557335] block">
-                      Studio &amp; Estate Address
+                      Address
                     </span>
                     <span className="text-xs sm:text-sm text-[#3c5445] leading-relaxed">
-                      House of Gardens, Tea Estate Road, Darjeeling, West Bengal 734101, India
+                      Gulmohar Greens, Mohan Nagar, Ghaziabad, 201007, India
                     </span>
                   </div>
                 </div>
