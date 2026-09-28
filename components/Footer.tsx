@@ -138,17 +138,30 @@ From Nature’s Finest Leaves to Your Cup, We Brew Wellness with Care.          
           </div>
         </Reveal>
 
-        {/* Copyright & Domain Note */}
+        {/* Copyright & FSSAI License */}
         <Reveal
-          className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#59644A] font-medium"
+          className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-[#59644A] font-medium"
           y={15}
           duration={0.7}
           delay={0.1}
         >
-          <p>
+          <p className="text-center sm:text-left">
             © 2026 House of Gardens (HOG). Brewing Wellness. All rights
             reserved.
           </p>
+
+          <div className="flex flex-col items-start">
+            <Image
+              src="/logo/FSSAI-LICENSE-DISYTAX-IMG-626x427 (1).png"
+              alt="FSSAI License"
+              width={80}
+              height={55}
+              className="h-9 w-auto object-contain"
+            />
+            <span className="text-xs text-[#334B18]/85 font-semibold tracking-wide mt-1">
+              License No: 22723687000148
+            </span>
+          </div>
         </Reveal>
       </div>
     </footer>
