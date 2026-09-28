@@ -30,7 +30,6 @@ const BOTANICAL_CUTOUT_IMAGES: Record<string, string> = {
 interface BotanicalStoryData {
   title: string;
   points: string[];
-  badges: [string, string, string];
 }
 
 const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
@@ -45,7 +44,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Enjoy its naturally tangy taste as an alternative to heavily sweetened beverages.",
   "Savour a warm cup of caffeine-free hibiscus tea as you unwind after a busy day."
 ],
-    badges: ["Deep Ruby Red", "Tart & Refreshing", "Naturally Caffeine-Free"],
   },
   "elaichi-green-tea": {
     title: "How Can Elaichi Green Tea Support Your Wellness Goals?",
@@ -55,7 +53,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Seeking a more considered approach to heart health? Incorporate this beverage into a balanced lifestyle that supports overall wellness.",
   "Working towards your weight-management goals? Pair a mindful tea ritual with balanced nutrition, regular movement, and sustainable healthy habits."
 ],
-    badges: ["Warm Spiced Amber", "Aromatic & Uplifting", "Gentle Energy"],
   },
   "darjeeling-green-tea": {
     title: "How Can Darjeeling Green Tea Support Your Wellness Goals?",
@@ -65,7 +62,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Want to make everyday wellness a priority? Add a considered tea ritual to a lifestyle built around balanced nutrition, adequate rest, and regular activity.",
   "Seeking a refreshing daily ritual? Take a moment away from the pace of everyday life to savour a cup of green tea for both pleasure and wellness."
 ],
-    badges: ["Pale Jade Green", "Muscatel & Vegetal", "Antioxidant Rich"],
   },
   "peach-green-tea": {
     title: "How Can Peach Green Tea Support Your Wellness Goals?",
@@ -75,7 +71,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Building a more mindful wellness routine? Make Peach Green Tea part of a balanced lifestyle that includes nutritious meals, regular movement, and restorative rest.",
   "Looking for a little natural lift during your day? Enjoy Peach Green Tea as a refreshing part of your morning or afternoon routine to support alertness."
 ],
-    badges: ["Sunlit Amber", "Juicy Stone Fruit", "Refreshing Hydration"],
   },
   "blue-tea": {
     title: "How Can Blue Tea Support Your Wellness Goals?",
@@ -85,7 +80,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Cognitive support: Blue Tea is presented as supporting cognitive function, making it a thoughtful addition to a mindful break.",
   "Digestive wellness: The catalogue notes that it may aid digestive health, offering a gentle botanical option to enjoy throughout the day."
 ],
-    badges: ["Vibrant Cobalt Blue", "Earthy & Smooth", "Naturally Caffeine-Free"],
   },
   "rose-green-tea": {
     title: "How Can Rose Green Tea Support Your Wellness Goals?",
@@ -95,7 +89,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Natural relaxation: Presented as a natural relaxant, it can be enjoyed as a quiet pause to step away from distractions during a busy day.",
   "Skin hydration: The catalogue notes skin hydration as a benefit, making it a lovely companion to pair with regular water intake and your usual skincare habits."
 ],
-    badges: ["Soft Blossom Tint", "Sensual Floral Notes", "Mood Elevating"],
   },
   "lavender-green-tea": {
     title: "How Can Lavender Green Tea Support Your Wellness Goals?",
@@ -105,7 +98,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Mood enhancement: The catalogue highlights mood enhancement as a potential benefit to help you pause, breathe, and enjoy a quiet cup during a busy day.",
   "Calming and relaxation: Lavender Green Tea is presented as a calming choice to savour during a peaceful break or as part of an evening transition ritual."
 ],
-    badges: ["Gentle Lavender Hue", "Calming Aromatics", "Evening Wind-Down"],
   },
   "white-tea": {
     title: "How Can Silver Needle White Tea Support Your Wellness Goals?",
@@ -115,7 +107,6 @@ const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "Improves skin texture: Positioned as supportive of skin texture, making it a great complement to a broader self-care routine that includes proper hydration and skincare.",
   "Protection against UV rays: The catalogue lists UV protection as a benefit, though tea should always be used alongside proper sunscreen and established sun-protection measures."
 ],
-    badges: ["Silvery Champagne", "Melon & Wildflower", "Cellular Guard"],
   },
 };
 
@@ -133,11 +124,6 @@ export default function ProductDetailView({
     points: [
       blend.description ||
         "A pure, handpicked botanical tea blend curated for mindful wellness moments.",
-    ],
-    badges: [
-      "100% Botanical",
-      "Pure Whole Cuts",
-      blend.caffeineLevel || "Natural Refreshment",
     ],
   };
   const botanicalCutoutImage =
@@ -453,26 +439,6 @@ export default function ProductDetailView({
                 ))}
               </ul>
 
-              {/* 3 Pills under story with leaf icons */}
-              <div className="flex flex-wrap items-center gap-5 sm:gap-7 text-sm sm:text-base font-medium text-[#2d4637] pt-4 border-t border-[#ded8cb]/60">
-                {storyData.badges.map((badge, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5">
-                    <svg
-                      className="w-5 h-5 text-[#4b6628] shrink-0"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12" />
-                    </svg>
-                    <span>{badge}</span>
-                  </div>
-                ))}
-              </div>
             </motion.div>
 
             {/* Right Column: Transparent Cutout Image of Dried Flowers in Wooden Bowl */}
