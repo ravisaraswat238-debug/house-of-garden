@@ -220,7 +220,7 @@ export default function AllProductsView() {
 
           <div className="relative z-10 shrink-0">
             <a
-              href={`https://wa.me/?text=${encodeURIComponent(
+              href={`https://wa.me/919310772895?text=${encodeURIComponent(
                 "Hello House of Gardens, I would like guidance on selecting the right botanical tea blend."
               )}`}
               target="_blank"

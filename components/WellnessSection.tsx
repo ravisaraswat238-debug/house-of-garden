@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
 import Reveal from "@/components/Reveal";
 import {
@@ -112,15 +113,13 @@ export default function WellnessSection() {
                   agents or chemical preservatives.
                 </p>
                 <div className="mt-6 flex items-center justify-center gap-4">
-                  <a
+                  <Link
+                    href="/products"
                     className="px-6 py-2.5 bg-[#4b6628] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#3b511f] transition-colors inline-flex items-center gap-2"
-                    href=""
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span>Visit Online Flagship</span>
                     <MdArrowForward className="text-[15px]" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

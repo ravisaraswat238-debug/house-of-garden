@@ -46,7 +46,7 @@ My name is ${formData.fullName || "a tea lover"}.
 *Phone*: ${formData.phone || "N/A"}
 *Message*: ${formData.message || "I would like to inquire about your botanical blends."}`;
 
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/919310772895?text=${encodeURIComponent(text)}`, "_blank");
   };
 
 
@@ -175,7 +175,7 @@ My name is ${formData.fullName || "a tea lover"}.
                   </span>
                 </div>
                 <a
-                  href={`https://wa.me/?text=${encodeURIComponent(
+                  href={`https://wa.me/919310772895?text=${encodeURIComponent(
                     "Hello House of Gardens, I would like to speak with a tea sommelier."
                   )}`}
                   target="_blank"

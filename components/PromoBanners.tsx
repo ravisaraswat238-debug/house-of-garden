@@ -19,8 +19,8 @@ export default function PromoBanners() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link
-          href="#catalog-blends"
-          className="group relative block w-full aspect-[1904/560] overflow-hidden rounded-[8px] sm:rounded-[12px] shadow-md hover:shadow-xl transition-all duration-500 border border-black/5 cursor-pointer bg-[#fafaf7]"
+            href="/products"
+            className="group relative block w-full aspect-[1904/560] overflow-hidden rounded-[8px] sm:rounded-[12px] shadow-md hover:shadow-xl transition-all duration-500 border border-black/5 cursor-pointer bg-[#fafaf7]"
           style={{ aspectRatio: "1904 / 560" }}
         >
           {/* Smooth Zoom In / Zoom Out Image Container */}

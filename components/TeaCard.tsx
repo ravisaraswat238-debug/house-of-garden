@@ -74,11 +74,13 @@ export default function TeaCard({
           <span>View</span>
         </Link>
         <a
-          href="#"
+          href={`https://wa.me/919310772895?text=${encodeURIComponent(
+            `Hello House of Gardens, I would like to buy:\n\n• Product: ${blend.name}\n• Weight: ${blend.weight || "50gm"}\n\nPlease share the details to place my order.`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#4b6628] hover:bg-[#3b5220] text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 text-center cursor-pointer active:scale-95 shadow-xs hover:shadow-md"
-          aria-label={`Buy ${blend.name}`}
+          aria-label={`Buy ${blend.name} on WhatsApp`}
         >
           <MdShoppingBag className="text-base shrink-0" />
           <span>Buy</span>

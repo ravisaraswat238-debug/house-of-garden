@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Leaf,
   Award,
@@ -143,8 +144,8 @@ export default function AboutSection() {
               </p>
 
               {/* CTA Button */}
-              <a
-                href="#catalog-blends"
+              <Link
+                href="/about"
                 className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#3e5924] px-8 py-3.5 text-sm sm:text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#2e431a] hover:shadow-lg hover:scale-[1.02]"
               >
                 <span>Our Story</span>
@@ -152,7 +153,7 @@ export default function AboutSection() {
                   size={18}
                   className="transition-transform duration-300 group-hover:translate-x-1.5"
                 />
-              </a>
+              </Link>
             </motion.div>
 
             {/* RIGHT IMAGE COMPOSITION */}

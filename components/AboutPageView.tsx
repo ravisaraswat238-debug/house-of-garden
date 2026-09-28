@@ -189,7 +189,7 @@ export default function AboutPageView() {
                 </Link>
 
                 <a
-                  href={`https://wa.me/?text=${encodeURIComponent(
+                  href={`https://wa.me/919310772895?text=${encodeURIComponent(
                     "Hello House of Gardens, I would like to learn more about your botanical tea blends and story."
                   )}`}
                   target="_blank"
@@ -197,7 +197,7 @@ export default function AboutPageView() {
                   className="inline-flex items-center gap-2 rounded-full bg-white/80 hover:bg-white border border-[#cad5be] px-6 py-3.5 text-sm sm:text-base font-semibold text-[#233d2f] transition-all duration-200 cursor-pointer"
                 >
                   <FaWhatsapp className="text-xl text-[#25D366]" />
-                  <span>Chat with Sommelier</span>
+                  <span>Chat with Us</span>
                 </a>
               </div>
             </motion.div>
@@ -529,7 +529,7 @@ export default function AboutPageView() {
             </Link>
 
             <a
-              href={`https://wa.me/?text=${encodeURIComponent(
+              href={`https://wa.me/919310772895?text=${encodeURIComponent(
                 "Hello House of Gardens, I would like to learn more about your tea blends."
               )}`}
               target="_blank"

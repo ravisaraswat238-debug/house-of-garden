@@ -1,15 +1,17 @@
 import React from "react";
-import { MdEco, MdLocalFlorist, MdNorthEast } from "react-icons/md";
+import { MdEco, MdNorthEast } from "react-icons/md";
 
-const announcementItems = [
+interface AnnouncementItem {
+  icon: React.ReactNode;
+  text: string;
+  link?: string;
+  badge?: string;
+}
+
+const announcementItems: AnnouncementItem[] = [
   {
     icon: <MdEco className="text-[14px] text-[#fed488] shrink-0" />,
     text: "BREWING WELLNESS • 100% ORGANIC • NO ARTIFICIAL COLORS • NO PRESERVATIVES",
-  },
-  {
-    icon: <MdLocalFlorist className="text-[14px] text-[#fed488] shrink-0" />,
-    text: "MATCHA MOMENTS — BUY 1 GET 1 FREE",
-    badge: "SPECIAL OFFER",
   },
   {
     icon: <MdEco className="text-[14px] text-[#fed488] shrink-0" />,

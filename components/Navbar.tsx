@@ -108,7 +108,7 @@ export default function Navbar() {
             href="/products"
             className="group inline-flex items-center gap-2 sm:gap-2.5 rounded-full bg-[#3e5924] px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#2e431a] hover:shadow-lg hover:scale-[1.02] active:scale-95 cursor-pointer"
           >
-            <span>Explore</span>
+            <span>Discover </span>
             <ArrowRight
               size={16}
               className="transition-transform duration-300 group-hover:translate-x-1.5"

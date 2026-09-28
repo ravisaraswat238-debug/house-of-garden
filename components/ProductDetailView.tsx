@@ -27,51 +27,94 @@ const BOTANICAL_CUTOUT_IMAGES: Record<string, string> = {
   "white-tea": "/productsImg/silver.png",
 };
 
-const BOTANICAL_STORIES: Record<
-  string,
-  {
-    story: string;
-    badges: [string, string, string];
-  }
-> = {
+interface BotanicalStoryData {
+  title: string;
+  points: string[];
+  badges: [string, string, string];
+}
+
+const BOTANICAL_STORIES: Record<string, BotanicalStoryData> = {
   "hibiscus-flower-tea": {
-    story:
-      "Hibiscus tea is an herbal infusion made by steeping the dried calyces (petals) of the hibiscus plant (Hibiscus sabdariffa). Known for its deep ruby-red color and distinct tart, cranberry-like flavor profile, it has been enjoyed across cultures for generations. Completely free of artificial additives, preservatives, and caffeine, House of Gardens Hibiscus Flower Tea delivers a pure and unadulterated botanical experience in every cup.",
+    title: "How Hibiscus Flower Tea Supports Your Wellness Goals",
+    points: [
+      "Enjoy a naturally tart, cranberry-like infusion that brings a vibrant twist to your daily beverage routine.",
+  "Choose a naturally caffeine-free tea option for moments when you want to enjoy a warm or chilled drink without caffeine.",
+  "Add variety to your daily fluid intake with a refreshing hibiscus infusion, served hot or chilled.",
+  "Make time for a beautiful cup of hibiscus tea as part of your everyday self-care ritual.",
+  "Explore hibiscus, a botanical infusion naturally containing plant compounds such as anthocyanins and polyphenols.",
+  "Enjoy its naturally tangy taste as an alternative to heavily sweetened beverages.",
+  "Savour a warm cup of caffeine-free hibiscus tea as you unwind after a busy day."
+],
     badges: ["Deep Ruby Red", "Tart & Refreshing", "Naturally Caffeine-Free"],
   },
   "elaichi-green-tea": {
-    story:
-      "Elaichi Green Tea is an Ayurvedic-inspired botanical formulation marrying tender high-grown green tea leaves with whole aromatic green cardamom pods. Known for its warming spices and soothing digestive properties, it has been savored across the subcontinent for revitalizing balance. Crafted with zero artificial essences, House of Gardens Elaichi Green Tea delivers gentle energy with every wholesome steep.",
+    title: "How Can Elaichi Green Tea Support Your Wellness Goals?",
+    points: [
+  "Looking for a lighter after-meal ritual? Make a cup of Elaichi Green Tea part of your post-meal routine for natural digestive support.",
+  "Want to be more mindful of your metabolism? Enjoy this blend as part of a balanced daily routine alongside nutritious meals and regular physical activity.",
+  "Seeking a more considered approach to heart health? Incorporate this beverage into a balanced lifestyle that supports overall wellness.",
+  "Working towards your weight-management goals? Pair a mindful tea ritual with balanced nutrition, regular movement, and sustainable healthy habits."
+],
     badges: ["Warm Spiced Amber", "Aromatic & Uplifting", "Gentle Energy"],
   },
   "darjeeling-green-tea": {
-    story:
-      "Darjeeling Green Tea is harvested from the high-elevation slopes of the misty Himalayas, capturing tender, unoxidized first flush shoots. Celebrated for its delicate muscatel aroma and crisp vegetal sweetness, this single-estate tea preserves maximum catechins and natural antioxidants. Completely unadulterated, House of Gardens Darjeeling Green Tea offers a pure, refreshing mountain clarity.",
+    title: "How Can Darjeeling Green Tea Support Your Wellness Goals?",
+    points: [
+  "Looking for a more focused start to your day? Make a thoughtful tea ritual part of your morning with green tea's naturally occurring caffeine to support alertness and attention.",
+  "Interested in antioxidant-rich beverages? Enjoy a cup containing naturally occurring plant compounds like catechins as part of a varied, balanced diet.",
+  "Want to make everyday wellness a priority? Add a considered tea ritual to a lifestyle built around balanced nutrition, adequate rest, and regular activity.",
+  "Seeking a refreshing daily ritual? Take a moment away from the pace of everyday life to savour a cup of green tea for both pleasure and wellness."
+],
     badges: ["Pale Jade Green", "Muscatel & Vegetal", "Antioxidant Rich"],
   },
   "peach-green-tea": {
-    story:
-      "Peach Green Tea is a refreshing orchard-inspired infusion blending antioxidant-rich spring green tea leaves with natural sun-ripened peach essence and golden calendula petals. Naturally hydrating and soothingly fruity, it provides a guilt-free wellness alternative that rejuvenates the senses both hot and over ice.",
+    title: "How Can Peach Green Tea Support Your Wellness Goals?",
+    points: [
+  "Looking for a refreshing alternative to your usual beverage? Enjoy the fruity character of Peach Green Tea as a delightful change for a mindful break.",
+  "Want to make hydration more enjoyable? Add variety to your daily fluid intake with a beautifully prepared cup of Peach Green Tea, served warm or chilled.",
+  "Building a more mindful wellness routine? Make Peach Green Tea part of a balanced lifestyle that includes nutritious meals, regular movement, and restorative rest.",
+  "Looking for a little natural lift during your day? Enjoy Peach Green Tea as a refreshing part of your morning or afternoon routine to support alertness."
+],
     badges: ["Sunlit Amber", "Juicy Stone Fruit", "Refreshing Hydration"],
   },
   "blue-tea": {
-    story:
-      "Blue Tea is an enchanting caffeine-free herbal infusion made from whole dried Butterfly Pea flowers (Clitoria ternatea). Celebrated for its vivid cobalt-blue liquor and rich concentration of anthocyanins, it miraculously transitions to royal violet with a squeeze of fresh lemon, delivering an uplifting and visual ritual steeped in heritage.",
+    title: "How Can Blue Tea Support Your Wellness Goals?",
+    points: [
+  "Antioxidant-rich: Blue Tea is described as rich in antioxidants, compounds that help protect cells from oxidative stress.",
+  "Skin wellness: The catalogue positions this infusion as a way to support healthy-looking skin as part of your everyday self-care ritual.",
+  "Cognitive support: Blue Tea is presented as supporting cognitive function, making it a thoughtful addition to a mindful break.",
+  "Digestive wellness: The catalogue notes that it may aid digestive health, offering a gentle botanical option to enjoy throughout the day."
+],
     badges: ["Vibrant Cobalt Blue", "Earthy & Smooth", "Naturally Caffeine-Free"],
   },
   "rose-green-tea": {
-    story:
-      "Rose Green Tea is a sensual botanical union of organic Damask rose petals and tender, uncrushed emerald green tea leaves. The gentle steam distillation of natural rose aromatics promotes mood elevation and skin hydration, offering a fragrant, stress-melting experience in every calming cup.",
+    title: "How Can Rose Green Tea Support Your Wellness Goals?",
+    points:[
+  "Vitamin-rich: Described as rich in vitamins, Rose Green Tea brings a nourishing touch to your daily tea routine as part of a varied, balanced lifestyle.",
+  "Antioxidant support: Its antioxidant content is highlighted as part of a mindful wellness ritual to help protect cells from oxidative stress.",
+  "Natural relaxation: Presented as a natural relaxant, it can be enjoyed as a quiet pause to step away from distractions during a busy day.",
+  "Skin hydration: The catalogue notes skin hydration as a benefit, making it a lovely companion to pair with regular water intake and your usual skincare habits."
+],
     badges: ["Soft Blossom Tint", "Sensual Floral Notes", "Mood Elevating"],
   },
   "lavender-green-tea": {
-    story:
-      "Lavender Green Tea combines the tranquil blossoms of French lavender with soothing whole-leaf green tea. Designed for twilight wind-downs and restful mindfulness, it calms nervous tension while delivering a clean, herbaceous finish without bitter aftertaste.",
+    title: "How Can Lavender Green Tea Support Your Wellness Goals?",
+    points: [
+  "Sleep quality: The catalogue lists improved sleep quality as a benefit, making tea time part of a relaxing bedtime routine while keeping individual needs in mind.",
+  "Skin health: Positioned as supportive of skin health, this tea can complement your broader self-care routine alongside balanced nutrition and consistent skincare.",
+  "Mood enhancement: The catalogue highlights mood enhancement as a potential benefit to help you pause, breathe, and enjoy a quiet cup during a busy day.",
+  "Calming and relaxation: Lavender Green Tea is presented as a calming choice to savour during a peaceful break or as part of an evening transition ritual."
+],
     badges: ["Gentle Lavender Hue", "Calming Aromatics", "Evening Wind-Down"],
   },
   "white-tea": {
-    story:
-      "Silver Needle White Tea is the crown jewel of botanical teas, hand-harvested exclusively at dawn before the morning dew vanishes. Made purely of unopened downy silver buds and dried naturally under the sun, it provides highest polyphenol density and a heavenly melon-sweet liquor with cellular purity.",
+    title: "How Can Silver Needle White Tea Support Your Wellness Goals?",
+    points: [
+  "Rich in antioxidants: The catalogue describes Silver Needle as rich in antioxidants to help protect cells from oxidative stress as part of a balanced lifestyle.",
+  "Supports heart health: Listed as a potential heart-health benefit, this tea can be enjoyed as one part of a balanced lifestyle rather than a replacement for medical care.",
+  "Improves skin texture: Positioned as supportive of skin texture, making it a great complement to a broader self-care routine that includes proper hydration and skincare.",
+  "Protection against UV rays: The catalogue lists UV protection as a benefit, though tea should always be used alongside proper sunscreen and established sun-protection measures."
+],
     badges: ["Silvery Champagne", "Melon & Wildflower", "Cellular Guard"],
   },
 };
@@ -86,8 +129,16 @@ export default function ProductDetailView({
   const blend = TEA_BLENDS.find((b) => b.id === blendId) || TEA_BLENDS[0];
   const allBlends = TEA_BLENDS;
   const storyData = BOTANICAL_STORIES[blend.id] || {
-    story: blend.description || "A pure, handpicked botanical tea blend curated for mindful wellness moments.",
-    badges: ["100% Botanical", "Pure Whole Cuts", blend.caffeineLevel || "Natural Refreshment"],
+    title: `How Can ${blend.name} Support Your Wellness Goals?`,
+    points: [
+      blend.description ||
+        "A pure, handpicked botanical tea blend curated for mindful wellness moments.",
+    ],
+    badges: [
+      "100% Botanical",
+      "Pure Whole Cuts",
+      blend.caffeineLevel || "Natural Refreshment",
+    ],
   };
   const botanicalCutoutImage =
     BOTANICAL_CUTOUT_IMAGES[blend.id] ||
@@ -262,8 +313,8 @@ export default function ProductDetailView({
             {/* Inquiry Action Button with WhatsApp */}
             <div className="flex items-center mb-8">
               <a
-                href={`https://wa.me/?text=${encodeURIComponent(
-                  `Hello House of Gardens, I would like to inquire about ${blend.name}.`
+                href={`https://wa.me/919310772895?text=${encodeURIComponent(
+                  `Hello House of Gardens, I would like to inquire about:\n\n• Product: ${blend.name}\n• Weight: ${blend.weight || "50gm"}\n• Category: ${blend.badgeText || "Whole Leaf / Flowers"}\n\nPlease share availability and ordering details.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -382,20 +433,28 @@ export default function ProductDetailView({
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="font-headline text-base font-medium uppercase tracking-[0.25em] text-[#344d3d] mb-2.5 block">
+              <span className="font-headline text-sm sm:text-base font-medium uppercase tracking-[0.25em] text-[#344d3d] mb-2.5 block">
                 THE BOTANICAL STORY
               </span>
 
-              <h2 className="font-headline text-2xl sm:text-3xl lg:text-[42px] text-[#1b3425] font-light leading-[1.2] tracking-tight mb-5">
-                What is {blend.name}?
+              <h2 className="font-headline text-2xl sm:text-3xl lg:text-[38px] text-[#1b3425] font-light leading-[1.25] tracking-tight mb-6">
+                {storyData.title}
               </h2>
 
-              <p className="text-[#3c5445] text-base sm:text-lg font-normal leading-relaxed mb-8 max-w-2xl text-justify sm:text-left">
-                {storyData.story}
-              </p>
+              {/* Pointers List */}
+              <ul className="space-y-3 sm:space-y-3.5 mb-8">
+                {storyData.points.map((pointText, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4b6628] mt-2.5 shrink-0" />
+                    <p className="text-[#3c5445] text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                      {pointText}
+                    </p>
+                  </li>
+                ))}
+              </ul>
 
               {/* 3 Pills under story with leaf icons */}
-              <div className="flex flex-wrap items-center gap-5 sm:gap-7 text-sm sm:text-base font-medium text-[#2d4637]">
+              <div className="flex flex-wrap items-center gap-5 sm:gap-7 text-sm sm:text-base font-medium text-[#2d4637] pt-4 border-t border-[#ded8cb]/60">
                 {storyData.badges.map((badge, idx) => (
                   <div key={idx} className="flex items-center gap-2.5">
                     <svg
@@ -408,7 +467,7 @@ export default function ProductDetailView({
                       strokeLinejoin="round"
                     >
                       <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12" />
                     </svg>
                     <span>{badge}</span>
                   </div>
