@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Script from "next/script";
 import { FaInstagram } from "react-icons/fa";
-import { MdPlayArrow, MdArrowOutward, MdFavorite } from "react-icons/md";
+import { MdPlayArrow, MdArrowOutward } from "react-icons/md";
 import Reveal from "@/components/Reveal";
 
 export interface InstagramSectionProps {
@@ -19,79 +19,51 @@ interface InstagramPost {
   src: string;
   title: string;
   caption: string;
-  likes: string;
+  url: string;
   isReel?: boolean;
 }
 
 const houseOfGardensPosts: InstagramPost[] = [
   {
-    src: "/productsImg/4.png",
+    src: "/insta/insta1.png",
     title: "Hibiscus Flower Tea",
-    caption: "Ruby crimson infusion with sun-dried petals 🌺",
-    likes: "1.4k",
+    caption: "READY TO DISPATCH! ORDER YOU CUP OF WELLNESS TODAY!",
+    url: "https://www.instagram.com/reel/C-cjnkFypnf/",
     isReel: true,
   },
   {
-    src: "/productsImg/6.png",
+    src: "/insta/insta2.png",
     title: "Blue Butterfly Pea",
-    caption: "Nature's color-changing botanical brew 🦋✨",
-    likes: "2.1k",
+    caption: "This vibrant hibiscus cooler with chia seeds ft. HOG is the perfect summer refresh.",
+    url: "https://www.instagram.com/reel/C8lxI3SSmG4/",
     isReel: true,
   },
   {
-    src: "/productsImg/1.png",
+    src: "/insta/insta3.png",
     title: "Silver Needle White Tea",
-    caption: "Hand-plucked tender spring tips for tranquility 🕊️",
-    likes: "980",
+    caption: "House of Gardens tea range offers various Health and Beauty benefits.",
+    url: "https://www.instagram.com/reel/C37iZODP_Id/",
     isReel: true,
   },
   {
-    src: "/productsImg/5.png",
+    src: "/insta/insta4.png",
     title: "Rose Green Tea",
-    caption: "Himalayan roses paired with single-estate tea 🌹",
-    likes: "1.8k",
+    caption: "From delicate White Tea to vibrant Buttertly Pea Flower Tea.",
+    url: "https://www.instagram.com/p/Da-oICBTiMd/",
     isReel: true,
   },
   {
-    src: "/banners/about-tea-harvest.png",
+    src: "/insta/insta5.png",
     title: "Mountain Harvest",
     caption: "Morning mist over terraced tea gardens 🌿⛰️",
-    likes: "3.2k",
+    url: "https://www.instagram.com/reel/DHJNWMYT0Nw/",
     isReel: true,
   },
   {
-    src: "/productsImg/2.png",
+    src: "/insta/insta6.png",
     title: "Elaichi Green Tea",
     caption: "Crushed green cardamom with antioxidant leaves ☕",
-    likes: "1.1k",
-    isReel: true,
-  },
-  {
-    src: "/productsImg/8.png",
-    title: "Lavender Green Tea",
-    caption: "French lavender blossoms for your evening unwind 💜",
-    likes: "1.6k",
-    isReel: true,
-  },
-  {
-    src: "/banners/about-tea-cup.png",
-    title: "Slow Steeping Ritual",
-    caption: "Watch whole leaves unfurl and awaken the senses 🫖",
-    likes: "2.4k",
-    isReel: true,
-  },
-  {
-    src: "/productsImg/3.png",
-    title: "Darjeeling Green Tea",
-    caption: "Crisp vegetal notes from the Himalayan foothills 🍃",
-    likes: "1.3k",
-    isReel: true,
-  },
-  {
-    src: "/productsImg/7.png",
-    title: "Peach Green Tea",
-    caption: "Refreshing stone fruit sweetness naturally sun-dried 🍑",
-    likes: "1.7k",
+    url: "https://www.instagram.com/reel/C45M3A8v11s/",
     isReel: true,
   },
 ];
@@ -104,7 +76,7 @@ const Track = ({ ariaHidden }: { ariaHidden?: boolean }) => (
     {houseOfGardensPosts.map((post, idx) => (
       <a
         key={idx}
-        href={INSTAGRAM_PROFILE_URL}
+        href={post.url || INSTAGRAM_PROFILE_URL}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`View House of Gardens ${post.title} post on Instagram`}
@@ -118,19 +90,12 @@ const Track = ({ ariaHidden }: { ariaHidden?: boolean }) => (
           sizes="(max-width: 640px) 170px, (max-width: 768px) 205px, 235px"
         />
 
-        {/* Top Badges: Reel Play Indicator + Like Counter */}
-        <div className="absolute top-2.5 inset-x-2.5 z-10 flex items-center justify-between pointer-events-none">
-          <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/45 backdrop-blur-xs text-[11px] font-semibold text-white/95">
-            <MdFavorite className="text-red-400 text-xs" />
-            <span>{post.likes}</span>
+        {/* Top Badges: Reel Play Indicator */}
+        {post.isReel && (
+          <div className="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-black/45 backdrop-blur-xs flex items-center justify-center text-white/90 group-hover:bg-[#c29d59] group-hover:text-white transition-colors duration-300 pointer-events-none">
+            <MdPlayArrow className="text-base ml-0.5" />
           </div>
-
-          {post.isReel && (
-            <div className="w-7 h-7 rounded-full bg-black/45 backdrop-blur-xs flex items-center justify-center text-white/90 group-hover:bg-[#c29d59] group-hover:text-white transition-colors duration-300">
-              <MdPlayArrow className="text-base ml-0.5" />
-            </div>
-          )}
-        </div>
+        )}
 
         {/* Hover Gradient Overlay with Post Info */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white z-10">
@@ -144,7 +109,7 @@ const Track = ({ ariaHidden }: { ariaHidden?: boolean }) => (
           </p>
 
           <div className="mt-2.5 pt-2 border-t border-white/20 flex items-center justify-between text-[11px] text-white/80 font-medium">
-            <span>Watch Reel</span>
+            <span>{post.isReel ? "Watch Reel" : "View Post"}</span>
             <MdArrowOutward className="text-sm text-[#fed488] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </div>
         </div>
